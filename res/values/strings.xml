@@ -12,9 +12,9 @@
         <item >Accueil</item>
         <item >Planning</item>
         <item >Listes des courses</item>
-        <item >Communities</item>
-        <item >Pages</item>
-        <item >What\'s Hot</item>
+        <item >Rendez-vous</item>
+        <item >Menus</item>
+        <!--<item >What\'s Hot</item>-->
     </string-array>
     
     <!-- Nav Drawer List Item Icons -->
@@ -23,9 +23,9 @@
         <item>@drawable/ic_home</item>
         <item>@drawable/ic_calendar</item>
         <item>@drawable/ic_courses</item>
-        <item>@drawable/ic_communities</item>
-        <item>@drawable/ic_pages</item>
-        <item>@drawable/ic_whats_hot</item>
+        <item>@drawable/ic_rdv</item>
+        <item>@drawable/ic_menu</item>
+        <!--<item>@drawable/ic_whats_hot</item>-->
     </array>
     
     <!-- Content Description -->
