@@ -1,13 +1,12 @@
 package org.miage.ihm;
 
-import org.miage.ihm.adapter.NavDrawerListAdapter;
-import org.miage.ihm.model.NavDrawerItem;
-
 import java.util.ArrayList;
+
+import org.miage.ihm.navdrawer.adapter.NavDrawerListAdapter;
+import org.miage.ihm.navdrawer.model.NavDrawerItem;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -110,7 +109,6 @@ public class MainActivity extends Activity {
 			displayView(0);
 		}
 	}
-
 	/**
 	 * Slide menu item click listener
 	 * */
@@ -162,35 +160,45 @@ public class MainActivity extends Activity {
 	private void displayView(int position) {
 		// update the main content by replacing fragments
 		Fragment fragment = null;
+        int drawable = 0;
 		switch (position) {
 		case 0:
 			fragment = new HomeFragment();
+            drawable = R.drawable.ic_home;
 			break;
 		case 1:
-			fragment = new PlanningFragment();
+            fragment = new PlanningFragment();
+            drawable = R.drawable.ic_calendar;
 			break;
 		case 2:
 			fragment = new CoursesFragment();
+            drawable = R.drawable.ic_courses;
 			break;
 		case 3:
 			fragment = new RdvFragment();
+            drawable = R.drawable.ic_rdv;
 			break;
 		case 4:
-			fragment = new MenuFragment();
+            fragment = new MenuFragment();
+            drawable = R.drawable.ic_menu;
+            break;
 		default:
 			break;
 		}
 
 		if (fragment != null) {
-			FragmentManager fragmentManager = getFragmentManager();
-			fragmentManager.beginTransaction()
+			android.app.FragmentManager fragmentManager;
+            fragmentManager = getFragmentManager();
+            fragmentManager.beginTransaction()
 					.replace(R.id.frame_container, fragment).commit();
 
 			// update selected item and title, then close the drawer
 			mDrawerList.setItemChecked(position, true);
 			mDrawerList.setSelection(position);
+            getActionBar().setLogo(drawable);
 			setTitle(navMenuTitles[position]);
 			mDrawerLayout.closeDrawer(mDrawerList);
+        //} else if(dpdf != null) {
 		} else {
 			// error in creating fragment
 			Log.e("MainActivity", "Error in creating fragment");
@@ -202,6 +210,11 @@ public class MainActivity extends Activity {
 		mTitle = title;
 		getActionBar().setTitle(mTitle);
 	}
+
+    /*@Override
+    public void setNavMenuIcons(int n) {
+
+    }*/
 
 	/**
 	 * When using the ActionBarDrawerToggle, you must call it during

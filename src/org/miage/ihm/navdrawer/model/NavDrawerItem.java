@@ -1,4 +1,4 @@
-package org.miage.ihm.model;
+package org.miage.ihm.navdrawer.model;
 
 public class NavDrawerItem {
 	

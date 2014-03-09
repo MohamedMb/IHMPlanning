@@ -1,7 +1,7 @@
-package org.miage.ihm.adapter;
+package org.miage.ihm.navdrawer.adapter;
 
 import org.miage.ihm.R;
-import org.miage.ihm.model.NavDrawerItem;
+import org.miage.ihm.navdrawer.model.NavDrawerItem;
 
 import java.util.ArrayList;
 
