@@ -39,6 +39,8 @@ public class PlanningFragment extends Fragment {
                 this.year = year;
                 this.month = month;
                 this.dayOfMonth = dayOfMonth;
+                AddDialogFragment dialog = AddDialogFragment.newInstance();
+                dialog.show(getFragmentManager(), "fragmentDialog");
             }
         });
 
