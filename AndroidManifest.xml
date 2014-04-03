@@ -13,15 +13,30 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name=".fragments.MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+      <activity
+          android:name=".activity.MainActivity"
+          android:label="@string/app_name"
+          android:launchMode="singleTop">
+        <intent-filter>
+          <action android:name="android.intent.action.MAIN" />
+          <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
+      <activity
+          android:name=".activity.AddRdvActivity"
+          android:label="@string/app_name" >
+      </activity>
+      <activity
+          android:name=".activity.AddCourseActivity"
+          android:label="@string/app_name" >
+      </activity>
+      <activity
+          android:name=".activity.AddMenuActivity"
+          android:label="@string/app_name" >
+      </activity>
+        <provider
+                android:name="org.miage.ihm.customcalendar.CalendarProvider"
+                android:authorities="org.miage.ihm.customcalendar.calendarprovider" />
     </application>
 
 </manifest>

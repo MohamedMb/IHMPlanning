@@ -1,14 +1,18 @@
-package org.miage.ihm.fragments;
+package org.miage.ihm.activity;
 
 import java.util.ArrayList;
 
 import org.miage.ihm.R;
+import org.miage.ihm.fragments.CoursesFragment;
+import org.miage.ihm.fragments.HomeFragment;
+import org.miage.ihm.fragments.MenuFragment;
+import org.miage.ihm.fragments.PlanningFragment;
+import org.miage.ihm.fragments.RdvFragment;
 import org.miage.ihm.navdrawer.adapter.NavDrawerListAdapter;
 import org.miage.ihm.navdrawer.model.NavDrawerItem;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -229,11 +233,5 @@ public class MainActivity extends Activity {
 		mDrawerToggle.syncState();
 	}
 
-	@Override
-	public void onConfigurationChanged(Configuration newConfig) {
-		super.onConfigurationChanged(newConfig);
-		// Pass any configuration change to the drawer toggls
-		mDrawerToggle.onConfigurationChanged(newConfig);
-	}
 
 }

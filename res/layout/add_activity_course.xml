@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:weightSum="1">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/titre_ajout_activity_course"
+        android:id="@+id/titre"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="41dp"
+        android:layout_alignParentLeft="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/libelle_course"
+        android:hint="Libellé de la liste"
+        android:inputType="text"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/contenu_course"
+        android:layout_alignTop="@+id/titre"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/contenu_ajout_activity_course"
+        android:id="@+id/contenu"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/contenu_course"
+        android:hint="Entrez la liste des courses"
+        android:inputType="textMultiLine"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/submit_course"
+        android:lines="2" android:layout_alignBottom="@+id/contenu"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_add_button"
+        android:id="@+id/submit_course"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="124dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/lieu_ajout_activity_course"
+        android:id="@+id/lieu"
+        android:layout_below="@+id/titre"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="60dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lieu_course"
+        android:layout_alignTop="@+id/lieu"
+        android:layout_alignLeft="@+id/libelle_course"
+        android:hint="Lieu des courses" android:layout_alignParentRight="true"/>
+  </RelativeLayout>
+</LinearLayout>
