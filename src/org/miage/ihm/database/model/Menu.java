@@ -19,51 +19,35 @@ public class Menu {
         this.produits = new ArrayList<Produit>(produits);
     }
 
-    public long getId() {
-        return id;
-    }
+    //--- getters ---
+    public long getId() {return id;}
+    public String getTitre() {return titre;}
+    public String getDescription() {return description;}
+    public Date getDate() {return date;}
+    public ArrayList<Produit> getProduits() {return produits;}
+    
+    //--- setters ---
+    public void setId(long id) {this.id = id;}
+    public void setTitre(String titre) {this.titre = titre;}
+    public void setDescription(String description) {this.description = description;}
+    public void setDate(Date date) {this.date = date;}
+    public void setProduits(ArrayList<Produit> produits) {this.produits = produits;}
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getTitre() {
-        return titre;
-    }
-
-    public void setTitre(String titre) {
-        this.titre = titre;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public ArrayList<Produit> getProduits() {
-        return produits;
-    }
-
-    public void setProduits(ArrayList<Produit> produits) {
-        this.produits = produits;
-    }
-
+    /**
+     * Ajout d'un nouveau produit dans le menu.
+     * @param produit Produit à ajouter dans le menu.
+     * @return
+     */
     public boolean addProduit(Produit produit) {
-        return produits.add(produit);
+    	return produits.add(produit);
     }
 
+    /**
+     * Suppression d'un produit.
+     * @param position
+     * @return
+     */
     public Produit deleteProduit(int position) {
-        return this.produits.remove(position);
+    	return this.produits.remove(position);
     }
 }

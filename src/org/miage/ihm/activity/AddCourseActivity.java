@@ -40,14 +40,12 @@ public class AddCourseActivity extends Activity {
         addTitleItems = getResources().getStringArray(R.array.add_elements_items);
         setTitle(addTitleItems[2]);
 
-
         final Intent intent = new Intent(AddCourseActivity.this, MainActivity.class);
         final int day = getIntent().getIntExtra("day", 0);
         final int month = getIntent().getIntExtra("month", 0);
         final int year = getIntent().getIntExtra("year", 0);
 
         Button submit = (Button)findViewById(R.id.submit_course);
-
 
         intent.putExtra("day", day);
         intent.putExtra("month", month);
@@ -74,7 +72,6 @@ public class AddCourseActivity extends Activity {
         });
 
     }
-
 
     /**
      *

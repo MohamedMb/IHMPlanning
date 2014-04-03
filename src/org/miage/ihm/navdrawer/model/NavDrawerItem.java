@@ -22,35 +22,15 @@ public class NavDrawerItem {
 		this.count = count;
 	}
 	
-	public String getTitle(){
-		return this.title;
-	}
+	//--- setters ---
+	public String getTitle(){return this.title;}
+	public int getIcon(){return this.icon;}
+	public String getCount(){return this.count;}
+	public boolean getCounterVisibility(){return this.isCounterVisible;}
 	
-	public int getIcon(){
-		return this.icon;
-	}
-	
-	public String getCount(){
-		return this.count;
-	}
-	
-	public boolean getCounterVisibility(){
-		return this.isCounterVisible;
-	}
-	
-	public void setTitle(String title){
-		this.title = title;
-	}
-	
-	public void setIcon(int icon){
-		this.icon = icon;
-	}
-	
-	public void setCount(String count){
-		this.count = count;
-	}
-	
-	public void setCounterVisibility(boolean isCounterVisible){
-		this.isCounterVisible = isCounterVisible;
-	}
+	//--- setters ---
+	public void setTitle(String title){this.title = title;}
+	public void setIcon(int icon){this.icon = icon;}
+	public void setCount(String count){this.count = count;}
+	public void setCounterVisibility(boolean isCounterVisible){this.isCounterVisible = isCounterVisible;}
 }

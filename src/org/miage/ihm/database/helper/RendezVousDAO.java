@@ -16,11 +16,11 @@ public class RendezVousDAO extends DAOBase {
     public static final String DESCRIPTION = "description";
     public static final String DATE = "date_rdv";
     public static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "("
-            + KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + TITLE + " VARCHAR(128) NOT NULL, "
-            + DESCRIPTION + " TEXT NOT NULL, "
-            + DATE + " DATE NOT NULL" +
-            ");";
+								            + KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+								            + TITLE + " VARCHAR(128) NOT NULL, "
+								            + DESCRIPTION + " TEXT NOT NULL, "
+								            + DATE + " DATE NOT NULL" +
+								            ");";
 
     public static final String RDV_TABLE_DROP = "DROP TABLE IF EXISTS " + TABLE_NAME + ";";
 

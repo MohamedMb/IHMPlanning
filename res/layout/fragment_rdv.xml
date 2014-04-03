@@ -9,7 +9,8 @@
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"
       android:layout_alignParentTop="true"
-      android:layout_alignParentLeft="true">
+      android:layout_alignParentLeft="true"
+      android:background="@drawable/rdv_activity">
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -13,6 +13,14 @@ public class Course {
     private Date date;
     private ArrayList<Produit> produits;
 
+    /**
+     * Constructeur de Course.
+     * @param id
+     * @param libelle
+     * @param description
+     * @param produits
+     * @param date
+     */
     public Course(long id, String libelle, String description, ArrayList<Produit> produits, Date date) {
         this.id = id;
         this.libelle = libelle;
@@ -21,45 +29,35 @@ public class Course {
         this.produits = new ArrayList<Produit>(produits);
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getLibelle() {
-        return libelle;
-    }
-
-    public void setLibelle(String libelle) {
-        this.libelle = libelle;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public ArrayList<Produit> getProduits() {
-        return produits;
-    }
-
-    public void setProduits(ArrayList<Produit> produits) {
-        this.produits = produits;
-    }
-
+    //--- getters ---
+    public long getId() {return id;}
+    public String getLibelle() {return libelle;}
+    public String getDescription() {return description;}
+    public ArrayList<Produit> getProduits() {return produits;}
+    
+    //--- setters ---
+    public void setId(long id) {this.id = id;}
+    public void setLibelle(String libelle) {this.libelle = libelle;}
+    public void setDescription(String description) {this.description = description;}
+    public void setProduits(ArrayList<Produit> produits) {this.produits = produits;}
+    
+    /**
+     * Ajout d'un nouveau produit dans la liste de produits.
+     * @param produit Produit à ajouter dans la liste de produits.
+     * @return
+     */
     public boolean addProduit(Produit produit) {
         if (this.produits.add(produit)) {
             return true;
         }
         return false;
     }
-
+    
+    /**
+     * Suppression d'un produit dans la liste de courses.
+     * @param position
+     * @return
+     */
     public Produit deleteProduit(int position) {
         return this.produits.remove(position);
     }

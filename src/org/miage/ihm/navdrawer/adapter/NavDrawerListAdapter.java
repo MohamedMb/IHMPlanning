@@ -19,6 +19,11 @@ public class NavDrawerListAdapter extends BaseAdapter {
 	private Context context;
 	private ArrayList<NavDrawerItem> navDrawerItems;
 	
+	/**
+	 * Constructeur de NavDrawerListAdapter.
+	 * @param context
+	 * @param navDrawerItems
+	 */
 	public NavDrawerListAdapter(Context context, ArrayList<NavDrawerItem> navDrawerItems){
 		this.context = context;
 		this.navDrawerItems = navDrawerItems;
@@ -46,7 +51,7 @@ public class NavDrawerListAdapter extends BaseAdapter {
                     context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
             convertView = mInflater.inflate(R.layout.drawer_list_item, null);
         }
-         
+        
         ImageView imgIcon = (ImageView) convertView.findViewById(R.id.icon);
         TextView txtTitle = (TextView) convertView.findViewById(R.id.title);
         TextView txtCount = (TextView) convertView.findViewById(R.id.counter);

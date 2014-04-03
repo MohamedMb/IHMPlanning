@@ -16,4 +16,10 @@
   <color name="note_text_disabled">#333333</color>
   <color name="calendar_active_month_bg">#fff5f7f9</color>
 
+  <!-- couleurs des activités -->
+  <color name="main_activity">#1086FF</color>
+  <color name="add_activity_course">#9CE8FF</color>
+  <color name="add_activity_menu">#FFC686</color>
+  <color name="add_activity_rdv">#FFB48F</color>
+  
 </resources>

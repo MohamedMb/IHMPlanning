@@ -11,44 +11,30 @@ public class RendezVous {
     private String titre;
     private String description;
     private Date date;
-
+    
+    /**
+     * Constructeur de RendezVous
+     * @param id
+     * @param titre
+     * @param description
+     * @param date
+     */
     public RendezVous(long id, String titre, String description, Date date) {
         this.id = id;
         this.titre = titre;
         this.description = description;
         this.date = date;
     }
-
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getTitre() {
-        return titre;
-    }
-
-    public void setTitre(String titre) {
-        this.titre = titre;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
+    
+    //--- getters ---
+    public long getId() {return id;}
+    public String getTitre() {return titre;}
+    public String getDescription() {return description;}
+    public Date getDate() {return date;}
+    
+    //--- setters ---
+    public void setId(long id) {this.id = id;}
+    public void setTitre(String titre) {this.titre = titre;}
+    public void setDescription(String description) {this.description = description;}
+    public void setDate(Date date) {this.date = date;}
 }

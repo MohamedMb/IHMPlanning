@@ -6,35 +6,32 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 
 public class DatabaseHandler extends SQLiteOpenHelper {
+	//--- table course ---
     public static final String COURSE_TABLE_NAME = "course";
     public static final String COURSE_KEY = "id";
     public static final String COURSE_DATE = "date";
     public static final String COURSE_CREATE_TABLE = "CREATE TABLE " + COURSE_TABLE_NAME + "("
-            + COURSE_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + COURSE_DATE + " DATE NOT NULL" +
-            ");";
+				             + COURSE_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+				             + COURSE_DATE + " DATE NOT NULL);";
     public static final String COURSE_TABLE_DROP = "DROP TABLE IF EXISTS " + COURSE_TABLE_NAME + ";";
 
-
-
+    //--- table menu ---
     public static final String MENU_TABLE_NAME = "menu";
     public static final String MENU_KEY = "id";
     public static final String MENU_DATE = "date";
     public static final String MENU_CREATE_TABLE = "CREATE TABLE " + MENU_TABLE_NAME + "("
-            + MENU_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + MENU_DATE + " DATE NOT NULL" +
-            ");";
+				             + MENU_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+				             + MENU_DATE + " DATE NOT NULL);";
     public static final String MENU_TABLE_DROP = "DROP TABLE IF EXISTS " + MENU_TABLE_NAME + ";";
 
+    //--- table produit ---
     public static final String PRODUIT_TABLE_NAME = "menu";
     public static final String PRODUIT_KEY = "id";
     public static final String PRODUIT_DATE = "date";
     public static final String PRODUIT_CREATE_TABLE = "CREATE TABLE " + PRODUIT_TABLE_NAME + "("
-            + PRODUIT_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + PRODUIT_DATE + " DATE NOT NULL" +
-            ");";
+            				 + PRODUIT_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            				 + PRODUIT_DATE + " DATE NOT NULL);";
     public static final String PRODUIT_TABLE_DROP = "DROP TABLE IF EXISTS " + PRODUIT_TABLE_NAME + ";";
-
 
     public DatabaseHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);

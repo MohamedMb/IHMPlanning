@@ -13,10 +13,10 @@ public class CourseDAO extends DAOBase {
     public static final String TITLE = "libelle";
     public static final String DESCRIPTION = "description";
     public static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "("
-            + KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + TITLE + " VARCHAR(128) NOT NULL, "
-            + DESCRIPTION + " TEXT NOT NULL"
-            + ");";
+								            + KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+								            + TITLE + " VARCHAR(128) NOT NULL, "
+								            + DESCRIPTION + " TEXT NOT NULL"
+								            + ");";
     public static final String RDV_TABLE_DROP = "DROP TABLE IF EXISTS " + TABLE_NAME + ";";
 
     public CourseDAO(Context c) {
