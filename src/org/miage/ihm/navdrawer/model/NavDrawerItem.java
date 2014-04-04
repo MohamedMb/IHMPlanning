@@ -22,7 +22,7 @@ public class NavDrawerItem {
 		this.count = count;
 	}
 	
-	//--- setters ---
+	//--- getters ---
 	public String getTitle(){return this.title;}
 	public int getIcon(){return this.icon;}
 	public String getCount(){return this.count;}

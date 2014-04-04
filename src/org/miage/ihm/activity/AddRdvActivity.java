@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.miage.ihm.R;
 import org.miage.ihm.customcalendar.CalendarProvider;
 import org.miage.ihm.customcalendar.Event;
+import org.miage.ihm.database.model.RendezVous;
 import org.miage.ihm.fragments.PlanningFragment;
 import org.miage.ihm.fragments.RdvFragment;
 
@@ -59,15 +60,20 @@ public class AddRdvActivity extends Activity {
                 EditText titre = (EditText) findViewById(R.id.libelle_rdv);
                 EditText description = (EditText) findViewById(R.id.description_rdv);
                 EditText lieu = (EditText) findViewById(R.id.lieu_rdv);
+                
+                RdvFragment.rendezVous.add(new RendezVous(titre.getText().toString(), description.getText().toString(), null));
+                
                 intent.putExtra("titre", titre.getText().toString());
-                RdvFragment.titre.add(titre.getText().toString());
                 intent.putExtra("lieu", lieu.getText().toString());
                 intent.putExtra("description", description.getText().toString());
+                
                 insertElement(year, month, day,
                         titre.getText().toString(), description.getText().toString(),
                         lieu.getText().toString(), Event.COLOR_RED);
+                
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                
                 startActivityForResult(intent, PlanningFragment.REQ_RDV);
                 finish();
             }

@@ -26,6 +26,18 @@ public class RendezVous {
         this.date = date;
     }
     
+    /**
+     * Constructeur de RendezVous
+     * @param titre
+     * @param description
+     * @param date
+     */
+    public RendezVous(String titre, String description, Date date) {
+        this.titre = titre;
+        this.description = description;
+        this.date = date;
+    }
+    
     //--- getters ---
     public long getId() {return id;}
     public String getTitre() {return titre;}

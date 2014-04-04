@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.miage.ihm.R;
 import org.miage.ihm.customcalendar.CalendarProvider;
 import org.miage.ihm.customcalendar.Event;
+import org.miage.ihm.database.model.Course;
 import org.miage.ihm.fragments.CoursesFragment;
 import org.miage.ihm.fragments.PlanningFragment;
 
@@ -26,7 +27,6 @@ import android.widget.EditText;
  */
 public class AddCourseActivity extends Activity {
     private String [] addTitleItems;
-
 
     /**
      *
@@ -57,15 +57,20 @@ public class AddCourseActivity extends Activity {
                 EditText titre = (EditText) findViewById(R.id.libelle_course);
                 EditText contenu = (EditText) findViewById(R.id.contenu_course);
                 EditText lieu = (EditText) findViewById(R.id.lieu_course);
+                
+                CoursesFragment.courses.add(new Course(titre.getText().toString(), contenu.getText().toString(), null, null));
+                
                 intent.putExtra("titre", titre.getText().toString());
-                CoursesFragment.titre.add(titre.getText().toString());
                 intent.putExtra("lieu", lieu.getText().toString());
                 intent.putExtra("description", contenu.getText().toString());
+                
                 insertElement(year, month, day,
                         titre.getText().toString(), contenu.getText().toString(),
                         lieu.getText().toString(), Event.COLOR_GREEN);
+                
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                
                 startActivityForResult(intent, PlanningFragment.REQ_COURSE);
                 finish();
             }

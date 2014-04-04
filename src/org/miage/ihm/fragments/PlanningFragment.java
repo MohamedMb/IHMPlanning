@@ -6,6 +6,9 @@ import java.util.List;
 import org.miage.ihm.R;
 import org.miage.ihm.customcalendar.Day;
 import org.miage.ihm.customcalendar.ExtendedCalendarView;
+import org.miage.ihm.database.model.Course;
+import org.miage.ihm.database.model.Menu;
+import org.miage.ihm.database.model.RendezVous;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -15,17 +18,15 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 
 public class PlanningFragment extends Fragment {
-    private List listRdv = new ArrayList();
-    private List listMenu = new ArrayList();
-    private List listCourse = new ArrayList();
+    private List<RendezVous> listRdv = new ArrayList<RendezVous>();
+    private List<Menu> listMenu = new ArrayList<Menu>();
+    private List<Course> listCourse = new ArrayList<Course>();
 
     public final static int REQ_RDV = 0;
     public final static int REQ_COURSE = 1;
     public final static int REQ_MENU = 2;
 
-    public PlanningFragment() {
-
-    }
+    public PlanningFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

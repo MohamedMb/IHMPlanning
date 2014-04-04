@@ -24,6 +24,13 @@ public class Day{
 	BaseAdapter adapter;
 	ArrayList<Event> events = new ArrayList<Event>();
 	
+	/**
+	 * Constructeur de Day.
+	 * @param context
+	 * @param day
+	 * @param year
+	 * @param month
+	 */
 	public Day(Context context,int day, int year, int month){
 		this.day = day;
 		this.year = year;
@@ -45,25 +52,17 @@ public class Day{
 //		return endTime;
 //	}
 	
-	public int getMonth(){
-		return month;
-	}
+	public int getMonth(){return month;}
+	public int getYear(){return year;}
+	public int getDay(){return day;}
+	public int getStartDay(){return startDay;}
+	public int getNumOfEvenets(){return events.size();}
 	
-	public int getYear(){
-		return year;
-	}
-	
-	public void setDay(int day){
-		this.day = day;
-	}
-	
-	public int getDay(){
-		return day;
-	}
+	public void setDay(int day){this.day = day;}
+	public void setAdapter(BaseAdapter adapter){this.adapter = adapter;}
 	
 	/**
-	 * Add an event to the day
-	 * 
+	 * Ajout d'un évènement au jour.
 	 * @param event
 	 */
 	public void addEvent(Event event){
@@ -71,21 +70,12 @@ public class Day{
 	}
 	
 	/**
-	 * Set the start day
-	 * 
+	 * Sélection du jour de démarrage.
 	 * @param startDay
 	 */
 	public void setStartDay(int startDay){
 		this.startDay = startDay;
 		new GetEvents().execute();
-	}
-	
-	public int getStartDay(){
-		return startDay;
-	}
-	
-	public int getNumOfEvenets(){
-		return events.size();
 	}
 	
 	/**
@@ -103,17 +93,10 @@ public class Day{
 	}
 	
 	/**
-	 * Get all the events on the day
-	 * 
-	 * @return list of events
+	 * Récupération des évènement sur le jour.
+	 * @return
 	 */
-	public ArrayList<Event> getEvents(){
-		return events;
-	}
-	
-	public void setAdapter(BaseAdapter adapter){
-		this.adapter = adapter;
-	}
+	public ArrayList<Event> getEvents(){return events;}
 	
 	private class GetEvents extends AsyncTask<Void,Void,Void>{
 
@@ -138,9 +121,6 @@ public class Day{
 		
 		protected void onPostExecute(Void par){
 			adapter.notifyDataSetChanged();
-		}
-		
+		}	
 	}
-	
-
 }

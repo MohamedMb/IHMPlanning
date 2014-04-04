@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.miage.ihm.R;
 import org.miage.ihm.customcalendar.CalendarProvider;
 import org.miage.ihm.customcalendar.Event;
+import org.miage.ihm.database.model.Menu;
 import org.miage.ihm.fragments.MenuFragment;
 import org.miage.ihm.fragments.PlanningFragment;
 
@@ -26,7 +27,6 @@ import android.widget.EditText;
  */
 public class AddMenuActivity extends Activity {
     private String [] addTitleItems;
-
 
     /**
      *
@@ -59,15 +59,22 @@ public class AddMenuActivity extends Activity {
                 EditText titre = (EditText) findViewById(R.id.libelle_menu);
                 EditText contenu = (EditText) findViewById(R.id.contenu_menu);
                 //EditText lieu = (EditText) findViewById(R.id.lieu_rdv);
+                
+                Menu menu = new Menu(titre.getText().toString(), contenu.getText().toString(), null, null);
+                MenuFragment.menus.add(menu);
+                
                 intent.putExtra("titre", titre.getText().toString());
-                MenuFragment.titre.add(titre.getText().toString());
                 intent.putExtra("lieu", "");
                 intent.putExtra("description", contenu.getText().toString());
+                
+                //ajout d'un marqueur dans le calendrier au bon jour
                 insertElement(year, month, day,
                         titre.getText().toString(), contenu.getText().toString(),
                         "", Event.COLOR_BLUE);
+                
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                
                 startActivityForResult(intent, PlanningFragment.REQ_MENU);
                 finish();
             }

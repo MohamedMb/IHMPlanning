@@ -20,7 +20,7 @@ import android.widget.TextView;
 
 public class CalendarAdapter extends BaseAdapter{
 	
-	static final int FIRST_DAY_OF_WEEK =0;
+	static final int FIRST_DAY_OF_WEEK = 0;
 	Context context;
 	Calendar cal;
 	public String[] days;
@@ -180,7 +180,6 @@ public class CalendarAdapter extends BaseAdapter{
         int month = cal.get(Calendar.MONTH);
         TimeZone tz = TimeZone.getDefault();
         
-        // figure size of the array
         if(firstDay==1){
         	days = new String[lastDay+(FIRST_DAY_OF_WEEK*6)];
         }
@@ -190,7 +189,6 @@ public class CalendarAdapter extends BaseAdapter{
         
         int j=FIRST_DAY_OF_WEEK;
         
-        // populate empty days before first real day
         if(firstDay>1) {
 	        for(j=0;j<(firstDay-FIRST_DAY_OF_WEEK)+7;j++) {
 	        	days[j] = "";

@@ -26,7 +26,21 @@ public class Course {
         this.libelle = libelle;
         this.description = description;
         this.date = date;
-        this.produits = new ArrayList<Produit>(produits);
+        this.produits = produits;
+    }
+    
+    /**
+     * Constructeur de Course.
+     * @param libelle
+     * @param description
+     * @param produits
+     * @param date
+     */
+    public Course(String libelle, String description, ArrayList<Produit> produits, Date date) {
+        this.libelle = libelle;
+        this.description = description;
+        this.date = date;
+        this.produits = produits;
     }
 
     //--- getters ---

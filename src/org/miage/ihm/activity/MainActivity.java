@@ -29,10 +29,9 @@ public class MainActivity extends Activity {
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
 
-	// nav drawer title
+	// titre du nav drawer
 	private CharSequence mDrawerTitle;
 
-	// used to store app title
 	private CharSequence mTitle;
 
 	// slide menu items
@@ -49,10 +48,9 @@ public class MainActivity extends Activity {
 
 		mTitle = mDrawerTitle = getTitle();
 
-		// load slide menu items
+		// chargement des menus
 		navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
 
-		// nav drawer icons from resources
 		navMenuIcons = getResources()
 				.obtainTypedArray(R.array.nav_drawer_icons);
 
@@ -61,7 +59,6 @@ public class MainActivity extends Activity {
 
 		navDrawerItems = new ArrayList<NavDrawerItem>();
 
-		// adding nav drawer items to array
 		// Home
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
 		// Find People
@@ -72,7 +69,7 @@ public class MainActivity extends Activity {
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)/*, true, "22"*/));
 		// Pages
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
-		// What's hot, We  will add a counter here
+
 		//navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
 		
 
@@ -160,10 +157,9 @@ public class MainActivity extends Activity {
 	}
 
 	/**
-	 * Diplaying fragment view for selected nav drawer list item
+	 * Changement du fragment.
 	 * */
 	private void displayView(int position) {
-		// update the main content by replacing fragments
 		Fragment fragment = null;
         int drawable = 0;
 		switch (position) {
@@ -194,8 +190,7 @@ public class MainActivity extends Activity {
 		if (fragment != null) {
 			android.app.FragmentManager fragmentManager;
             fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction()
-					.replace(R.id.frame_container, fragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
 
 			// update selected item and title, then close the drawer
 			mDrawerList.setItemChecked(position, true);
@@ -205,8 +200,8 @@ public class MainActivity extends Activity {
 			mDrawerLayout.closeDrawer(mDrawerList);
         //} else if(dpdf != null) {
 		} else {
-			// error in creating fragment
-			Log.e("MainActivity", "Error in creating fragment");
+			// erreur lors de la création du fragment
+			Log.e("MainActivity", "Erreur lors de la création du fragment.");
 		}
 	}
 

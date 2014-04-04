@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content" >
-  <ImageView
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_activity">
+
+	<ImageView
       android:id="@+id/icon"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginLeft="4px"
-      android:layout_marginRight="10px"
-      android:layout_marginTop="4px"
+      android:layout_alignParentLeft="true"
       android:src="@drawable/ic_courses" >
-  </ImageView>
-  <TextView
-      android:id="@+id/label"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="@+id/label"
-      android:textSize="20px" >
-  </TextView>
-
-</LinearLayout> 
+  	</ImageView>
+	
+	<TextView
+	    android:id="@+id/label"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="23dp"
+	    android:layout_marginTop="3dp"
+	    android:layout_toRightOf="@id/icon"
+	    android:layout_alignParentTop="true"
+	    android:text="@id/label"
+	    android:textSize="16sp" >
+	</TextView>
+	
+	<TextView 
+	    android:id="@+id/description"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBottom="@id/icon"
+	    android:layout_alignLeft="@id/label"
+	    android:textSize="12sp" >
+	</TextView>
+  
+</RelativeLayout> 

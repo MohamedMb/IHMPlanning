@@ -16,7 +16,14 @@ public class Menu {
         this.titre = titre;
         this.description = description;
         this.date = date;
-        this.produits = new ArrayList<Produit>(produits);
+        this.produits = produits;
+    }
+    
+    public Menu(String titre, String description, Date date, ArrayList<Produit> produits) {
+        this.titre = titre;
+        this.description = description;
+        this.date = date;
+        this.produits = produits;
     }
 
     //--- getters ---
