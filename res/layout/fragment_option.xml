@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:orientation="vertical" >
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="37dp"
+        android:text="Option1" />
+
+    <Switch
+        android:id="@+id/Switch01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/switch1"
+        android:layout_below="@+id/switch1"
+        android:layout_marginTop="24dp"
+        android:text="Option2" />
+
+    <Switch
+        android:id="@+id/Switch02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Switch01"
+        android:layout_below="@+id/Switch01"
+        android:layout_marginTop="22dp"
+        android:text="Option3" />
+
+    <Switch
+        android:id="@+id/Switch03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Switch02"
+        android:layout_below="@+id/Switch02"
+        android:layout_marginTop="26dp"
+        android:text="Option4" />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Switch03"
+        android:layout_below="@+id/Switch03"
+        android:layout_marginTop="78dp"
+        android:src="@drawable/ic_facebook" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageButton1"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="false"
+        android:layout_toRightOf="@+id/imageButton1"
+        android:text="Synchroniser le planning avec Facebook ?"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+<ListView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@android:id/list"
+      android:layout_gravity="center_horizontal"/>
+</RelativeLayout>

@@ -15,6 +15,7 @@
         <item >Listes des courses</item>
         <item >Rendez-vous</item>
         <item >Menus</item>
+        <item >Option</item>
     </string-array>
 
   <string-array name="add_elements_items">
@@ -32,6 +33,7 @@
         <item>@drawable/ic_courses</item>
         <item>@drawable/ic_rdv</item>
         <item>@drawable/ic_menu</item>
+        <item>@drawable/ic_option</item>
         <!--<item>@drawable/ic_whats_hot</item>-->
     </array>
     
