@@ -58,9 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageButton1"
-        android:layout_alignParentEnd="false"
         android:layout_alignParentRight="true"
-        android:layout_alignParentStart="false"
         android:layout_toRightOf="@+id/imageButton1"
         android:text="Synchroniser le planning avec Facebook ?"
         android:textAppearance="?android:attr/textAppearanceMedium" />
