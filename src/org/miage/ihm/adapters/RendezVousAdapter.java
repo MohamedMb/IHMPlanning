@@ -25,7 +25,7 @@ public class RendezVousAdapter extends ArrayAdapter<RendezVous> {
         View row = convertView;
         if (row == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            row = inflater.inflate(R.layout.row_item_course, parent, false);
+            row = inflater.inflate(R.layout.row_item_rdv, parent, false);
         }
         
         

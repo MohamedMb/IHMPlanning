@@ -23,7 +23,7 @@ public class RdvFragment extends ListFragment {
         View rootView = inflater.inflate(R.layout.fragment_rdv, container, false);
 
         // ajout de la liste des rendezVous dans le fragment des rendezVous
-     	RendezVousAdapter rendezVousAdapter = new RendezVousAdapter(getActivity(), R.layout.row_item_menu, rendezVous);
+     	RendezVousAdapter rendezVousAdapter = new RendezVousAdapter(getActivity(), R.layout.row_item_rdv, rendezVous);
      	setListAdapter(rendezVousAdapter);
 
         return rootView;
