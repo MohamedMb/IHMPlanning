@@ -20,6 +20,7 @@ import android.text.format.Time;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by Mohamed on 02/04/14.
@@ -47,13 +48,12 @@ public class AddRdvActivity extends Activity {
         final int month = getIntent().getIntExtra("month", 0);
         final int year = getIntent().getIntExtra("year", 0);
 
-        Button submit = (Button)findViewById(R.id.submit_rdv);
-
-
         intent.putExtra("day", day);
         intent.putExtra("month", month);
         intent.putExtra("year", year);
-
+        
+        //--- clic sur le bouton d'ajout d'un rendez-vous ---
+        Button submit = (Button)findViewById(R.id.submit_rdv);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,10 +75,21 @@ public class AddRdvActivity extends Activity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 
                 startActivityForResult(intent, PlanningFragment.REQ_RDV);
+                Toast.makeText(getApplicationContext(), "Un rendez-vous vient d'être ajouté", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
-
+        
+        //--- clic sur le bouton annuler ---
+  		Button btn_cancel = (Button)findViewById(R.id.cancel_rdv);
+  		btn_cancel.setOnClickListener(new View.OnClickListener() {
+  		
+  			@Override
+  			public void onClick(View v) {
+  				finish();
+  			}
+  			
+  		});
     }
 
     /**

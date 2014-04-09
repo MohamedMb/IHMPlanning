@@ -7,65 +7,65 @@
               android:weightSum="1"
               android:background="@color/add_activity_menu">
 
-  <RelativeLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/titre_ajout_activity_menu"
-        android:id="@+id/titre"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="41dp"
-        android:layout_alignParentLeft="true"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/libelle_menu"
-        android:hint="Libellé du menu"
-        android:inputType="text"
-        android:layout_alignTop="@+id/titre" android:layout_alignLeft="@+id/contenu_menu" android:layout_alignParentRight="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/contenu_ajout_activity_menu"
-        android:id="@+id/description"
-        android:layout_below="@+id/libelle_menu"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="95dp"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/contenu_menu"
-        android:layout_alignBottom="@+id/description"
-        android:hint="Contenu du menu"
-        android:inputType="textMultiLine"
-        android:layout_alignLeft="@+id/submit_menu"
-        android:lines="2" android:layout_alignParentRight="true"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/submit_add_button"
-        android:id="@+id/submit_menu"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="124dp"/>
-
-    <Button
-        android:id="@+id/Button01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/submit_menu"
-        android:layout_alignTop="@+id/submit_menu"
-        android:layout_marginTop="60dp"
-        android:text="Annuler" />
-
-  </RelativeLayout>
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+	
+	  <TextView
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:textAppearance="?android:attr/textAppearanceLarge"
+	      android:text="@string/titre_ajout_activity_menu"
+	      android:id="@+id/titre"
+	      android:layout_alignParentTop="true"
+	      android:layout_marginTop="41dp"
+	      android:layout_alignParentLeft="true"/>
+	
+	  <EditText
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:id="@+id/libelle_menu"
+	      android:hint="@string/placeholder_libelle_menu"
+	      android:inputType="text"
+	      android:layout_alignTop="@+id/titre" android:layout_alignLeft="@+id/contenu_menu" android:layout_alignParentRight="true"/>
+	
+	  <TextView
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:textAppearance="?android:attr/textAppearanceLarge"
+	      android:text="@string/contenu_ajout_activity_menu"
+	      android:id="@+id/description"
+	      android:layout_below="@+id/libelle_menu"
+	      android:layout_alignParentLeft="true"
+	      android:layout_marginTop="95dp"/>
+	
+	  <EditText
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:id="@+id/contenu_menu"
+	      android:layout_alignBottom="@+id/description"
+	      android:hint="@string/placeholder_contenu_menu"
+	      android:inputType="textMultiLine"
+	      android:layout_alignLeft="@+id/submit_menu"
+	      android:lines="2" android:layout_alignParentRight="true"/>
+	
+	  <Button
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:text="@string/submit_add_button"
+	      android:id="@+id/submit_menu"
+	      android:layout_alignParentBottom="true"
+	      android:layout_centerHorizontal="true"
+	      android:layout_marginBottom="124dp"/>
+	
+	  <Button
+	      android:id="@+id/cancel_menu"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_alignLeft="@+id/submit_menu"
+	      android:layout_alignTop="@+id/submit_menu"
+	      android:layout_marginTop="60dp"
+	      android:text="@string/cancel_button" />
+	
+	</RelativeLayout>
 </LinearLayout>

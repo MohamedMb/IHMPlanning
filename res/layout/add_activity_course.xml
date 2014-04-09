@@ -28,7 +28,7 @@
             android:layout_alignLeft="@+id/contenu_course"
             android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/titre"
-            android:hint="Libellé de la liste"
+            android:hint="@string/placeholder_libelle_course"
             android:inputType="text" />
 
         <TextView
@@ -47,7 +47,7 @@
             android:layout_alignBottom="@+id/contenu"
             android:layout_alignLeft="@+id/submit_course"
             android:layout_alignParentRight="true"
-            android:hint="Entrez la liste des courses"
+            android:hint="@string/placeholder_liste_course"
             android:inputType="textMultiLine"
             android:lines="2" />
 
@@ -68,16 +68,16 @@
             android:layout_alignLeft="@+id/libelle_course"
             android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/lieu"
-            android:hint="Lieu des courses" />
+            android:hint="@string/placeholer_lieu_course" />
 
         <Button
-            android:id="@+id/Button01"
+            android:id="@+id/cancel_course"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignRight="@+id/submit_course"
             android:layout_below="@+id/submit_course"
             android:layout_marginTop="14dp"
-            android:text="Annuler" />
+            android:text="@string/cancel_button" />
 
         <Button
             android:id="@+id/submit_course"

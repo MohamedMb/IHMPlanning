@@ -84,44 +84,46 @@ public final class R {
         public static final int red=0x7f020019;
     }
     public static final class id {
-        public static final int Button01=0x7f0a000a;
-        public static final int RelativeLayout1=0x7f0a001e;
-        public static final int Switch01=0x7f0a0020;
-        public static final int Switch02=0x7f0a0021;
-        public static final int Switch03=0x7f0a0022;
-        public static final int action_settings=0x7f0a0026;
-        public static final int calendar=0x7f0a0024;
+        public static final int RelativeLayout1=0x7f0a0020;
+        public static final int Switch01=0x7f0a0022;
+        public static final int Switch02=0x7f0a0023;
+        public static final int Switch03=0x7f0a0024;
+        public static final int action_settings=0x7f0a0028;
+        public static final int calendar=0x7f0a0026;
+        public static final int cancel_course=0x7f0a000a;
+        public static final int cancel_menu=0x7f0a000f;
+        public static final int cancel_rdv=0x7f0a0014;
         public static final int contenu=0x7f0a0006;
         public static final int contenu_course=0x7f0a0005;
         public static final int contenu_menu=0x7f0a000c;
-        public static final int counter=0x7f0a001d;
+        public static final int counter=0x7f0a001f;
         public static final int description=0x7f0a000d;
-        public static final int description_rdv=0x7f0a0010;
+        public static final int description_rdv=0x7f0a0011;
         public static final int drawer_layout=0x7f0a0000;
         public static final int frame_container=0x7f0a0001;
-        public static final int icon=0x7f0a001b;
-        public static final int imageButton1=0x7f0a0023;
-        public static final int imageView1=0x7f0a0015;
-        public static final int imageView2=0x7f0a0017;
-        public static final int imageView3=0x7f0a0016;
-        public static final int imageView4=0x7f0a0018;
-        public static final int imageView5=0x7f0a0019;
-        public static final int imageView6=0x7f0a001a;
-        public static final int label=0x7f0a0025;
+        public static final int icon=0x7f0a001d;
+        public static final int imageButton1=0x7f0a0025;
+        public static final int imageView1=0x7f0a0017;
+        public static final int imageView2=0x7f0a0019;
+        public static final int imageView3=0x7f0a0018;
+        public static final int imageView4=0x7f0a001a;
+        public static final int imageView5=0x7f0a001b;
+        public static final int imageView6=0x7f0a001c;
+        public static final int label=0x7f0a0027;
         public static final int libelle_course=0x7f0a0004;
         public static final int libelle_menu=0x7f0a000b;
-        public static final int libelle_rdv=0x7f0a000f;
+        public static final int libelle_rdv=0x7f0a0010;
         public static final int lieu=0x7f0a0008;
         public static final int lieu_course=0x7f0a0009;
-        public static final int lieu_rdv=0x7f0a0012;
+        public static final int lieu_rdv=0x7f0a0013;
         public static final int list_slidermenu=0x7f0a0002;
-        public static final int rl=0x7f0a0014;
+        public static final int rl=0x7f0a0016;
         public static final int submit_course=0x7f0a0007;
         public static final int submit_menu=0x7f0a000e;
-        public static final int submit_rdv=0x7f0a0011;
-        public static final int switch1=0x7f0a001f;
-        public static final int textView1=0x7f0a0013;
-        public static final int title=0x7f0a001c;
+        public static final int submit_rdv=0x7f0a0012;
+        public static final int switch1=0x7f0a0021;
+        public static final int textView1=0x7f0a0015;
+        public static final int title=0x7f0a001e;
         public static final int titre=0x7f0a0003;
     }
     public static final class layout {
@@ -150,36 +152,44 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060002;
         public static final int app_name=0x7f060001;
-        public static final int cancel_button=0x7f060012;
-        public static final int contenu_ajout_activity_course=0x7f060017;
+        public static final int cancel_button=0x7f06000f;
+        public static final int contenu_ajout_activity_course=0x7f06001d;
         /**  Ajout Menu Activity 
          */
-        public static final int contenu_ajout_activity_menu=0x7f060013;
+        public static final int contenu_ajout_activity_menu=0x7f060016;
         /**  Content Description 
          */
         public static final int desc_list_item_icon=0x7f060006;
-        public static final int description_ajout_activity_rdv=0x7f060010;
+        public static final int description_ajout_activity_rdv=0x7f060013;
         public static final int drawer_close=0x7f060005;
         public static final int drawer_open=0x7f060004;
         public static final int friday=0x7f06000b;
         public static final int hello=0x7f060000;
         public static final int hello_world=0x7f060003;
-        public static final int lieu_ajout_activity_course=0x7f060016;
-        public static final int lieu_ajout_activity_rdv=0x7f06000f;
+        public static final int lieu_ajout_activity_course=0x7f06001c;
+        public static final int lieu_ajout_activity_rdv=0x7f060012;
         /**  Jour pour le custom calendar 
          */
         public static final int monday=0x7f060007;
+        public static final int placeholder_contenu_menu=0x7f060019;
+        public static final int placeholder_description_rdv=0x7f060014;
+        public static final int placeholder_libelle_course=0x7f06001b;
+        public static final int placeholder_libelle_menu=0x7f060018;
+        public static final int placeholder_lieu_rdv=0x7f060015;
+        public static final int placeholder_liste_course=0x7f06001f;
+        public static final int placeholer_lieu_course=0x7f06001e;
+        public static final int plcaholder_libelle_rdv=0x7f060011;
         public static final int saturday=0x7f06000c;
-        public static final int submit_add_button=0x7f060011;
+        public static final int submit_add_button=0x7f06000e;
         public static final int sunday=0x7f06000d;
         public static final int thursday=0x7f06000a;
         /**  Ajout Course Activity 
          */
-        public static final int titre_ajout_activity_course=0x7f060015;
-        public static final int titre_ajout_activity_menu=0x7f060014;
+        public static final int titre_ajout_activity_course=0x7f06001a;
+        public static final int titre_ajout_activity_menu=0x7f060017;
         /**  Ajout RDV Activity 
          */
-        public static final int titre_ajout_activity_rdv=0x7f06000e;
+        public static final int titre_ajout_activity_rdv=0x7f060010;
         public static final int tuesday=0x7f060008;
         public static final int wednesday=0x7f060009;
     }

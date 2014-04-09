@@ -20,6 +20,7 @@ import android.text.format.Time;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by Mohamed on 02/04/14.
@@ -46,13 +47,12 @@ public class AddMenuActivity extends Activity {
         final int month = getIntent().getIntExtra("month", 0);
         final int year = getIntent().getIntExtra("year", 0);
 
-        Button submit = (Button)findViewById(R.id.submit_menu);
-
-
         intent.putExtra("day", day);
         intent.putExtra("month", month);
         intent.putExtra("year", year);
-
+        
+        //--- clic sur le bouton d'ajout d'un menu ---
+        Button submit = (Button)findViewById(R.id.submit_menu);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,17 +69,28 @@ public class AddMenuActivity extends Activity {
                 
                 //ajout d'un marqueur dans le calendrier au bon jour
                 insertElement(year, month, day,
-                        titre.getText().toString(), contenu.getText().toString(),
-                        "", Event.COLOR_BLUE);
+                        	  titre.getText().toString(), contenu.getText().toString(),
+                        	  "", Event.COLOR_BLUE);
                 
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 
                 startActivityForResult(intent, PlanningFragment.REQ_MENU);
+                Toast.makeText(getApplicationContext(), "Un menu vient d'être ajouté", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
-
+        
+        //--- clic sur le bouton annuler ---
+		Button btn_cancel = (Button)findViewById(R.id.cancel_menu);
+		btn_cancel.setOnClickListener(new View.OnClickListener() {
+		
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+			
+		});
     }
 
     /**

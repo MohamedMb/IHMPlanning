@@ -7,86 +7,86 @@
               android:weightSum="1"
               android:background="@color/add_activity_rdv">
 
-  <RelativeLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/titre_ajout_activity_rdv"
-        android:id="@+id/titre"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="41dp"
-        android:layout_alignParentLeft="true"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/libelle_rdv"
-        android:hint="Libellé du rendez-vous"
-        android:inputType="text"
-        android:layout_alignParentRight="true"
-        android:layout_alignLeft="@+id/description_rdv"
-        android:layout_alignTop="@+id/titre"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/description_ajout_activity_rdv"
-        android:id="@+id/description"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/description_rdv"
-        android:layout_alignBottom="@+id/description"
-        android:hint="Entrez la description"
-        android:inputType="textMultiLine"
-        android:layout_alignParentRight="true"
-        android:layout_alignLeft="@+id/submit_rdv"
-        android:lines="2"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/submit_add_button"
-        android:id="@+id/submit_rdv"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="124dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/lieu_ajout_activity_rdv"
-        android:id="@+id/lieu"
-        android:layout_below="@+id/titre"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="60dp"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lieu_rdv"
-        android:layout_alignTop="@+id/lieu"
-        android:layout_alignLeft="@+id/libelle_rdv"
-        android:layout_alignRight="@+id/description_rdv"
-        android:hint="Lieu du rendez-vous"/>
-
-    <Button
-        android:id="@+id/Button01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/submit_rdv"
-        android:layout_alignTop="@+id/submit_rdv"
-        android:layout_marginTop="60dp"
-        android:text="Annuler" />
-
-  </RelativeLayout>
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+	
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textAppearance="?android:attr/textAppearanceLarge"
+		    android:text="@string/titre_ajout_activity_rdv"
+		    android:id="@+id/titre"
+		    android:layout_alignParentTop="true"
+		    android:layout_marginTop="41dp"
+		    android:layout_alignParentLeft="true"/>
+		
+		<EditText
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/libelle_rdv"
+		    android:hint="@string/plcaholder_libelle_rdv"
+		    android:inputType="text"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignLeft="@+id/description_rdv"
+		    android:layout_alignTop="@+id/titre"/>
+		
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textAppearance="?android:attr/textAppearanceLarge"
+		    android:text="@string/description_ajout_activity_rdv"
+		    android:id="@+id/description"
+		    android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"/>
+		
+		<EditText
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/description_rdv"
+		    android:layout_alignBottom="@+id/description"
+		    android:hint="@string/placeholder_description_rdv"
+		    android:inputType="textMultiLine"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignLeft="@+id/submit_rdv"
+		    android:lines="2"/>
+		
+		<Button
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/submit_add_button"
+		    android:id="@+id/submit_rdv"
+		    android:layout_alignParentBottom="true"
+		    android:layout_centerHorizontal="true"
+		    android:layout_marginBottom="124dp"/>
+		
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textAppearance="?android:attr/textAppearanceLarge"
+		    android:text="@string/lieu_ajout_activity_rdv"
+		    android:id="@+id/lieu"
+		    android:layout_below="@+id/titre"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginTop="60dp"/>
+		
+		<EditText
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/lieu_rdv"
+		    android:layout_alignTop="@+id/lieu"
+		    android:layout_alignLeft="@+id/libelle_rdv"
+		    android:layout_alignRight="@+id/description_rdv"
+		    android:hint="@string/placeholder_lieu_rdv"/>
+		
+		<Button
+		    android:id="@+id/cancel_rdv"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignLeft="@+id/submit_rdv"
+		    android:layout_alignTop="@+id/submit_rdv"
+		    android:layout_marginTop="60dp"
+		    android:text="@string/cancel_button" />
+	
+	</RelativeLayout>
 </LinearLayout>

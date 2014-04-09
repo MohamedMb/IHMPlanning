@@ -48,23 +48,30 @@
     <string name="friday">VEN</string>
     <string name="saturday">SAM</string>
     <string name="sunday">DIM</string>
-
-  <!-- Ajout RDV Activity -->
-  <string name="titre_ajout_activity_rdv">Titre</string>
-  <string name="lieu_ajout_activity_rdv">Lieu</string>
-  <string name="description_ajout_activity_rdv">Description</string>
+  
   <string name="submit_add_button">Ajouter</string>
   <string name="cancel_button">Annuler</string>
-
+  
+  <!-- Ajout RDV Activity -->
+  <string name="titre_ajout_activity_rdv">Titre</string>
+  <string name="plcaholder_libelle_rdv">Libellé du rendez-vous</string>
+  <string name="lieu_ajout_activity_rdv">Lieu</string>
+  <string name="description_ajout_activity_rdv">Description</string>
+  <string name="placeholder_description_rdv">Entrez la description</string>
+  <string name="placeholder_lieu_rdv">Lieu du rendez-vous</string>
+  
   <!-- Ajout Menu Activity -->
   <string name="contenu_ajout_activity_menu">Contenu</string>
   <string name="titre_ajout_activity_menu">Titre</string>
+  <string name="placeholder_libelle_menu">Libellé du menu</string>
+  <string name="placeholder_contenu_menu">Contenu du menu</string>
 
   <!-- Ajout Course Activity -->
   <string name="titre_ajout_activity_course">Titre</string>
+  <string name="placeholder_libelle_course">Libellé de la liste</string>
   <string name="lieu_ajout_activity_course">Lieu</string>
   <string name="contenu_ajout_activity_course">Liste</string>
-
-
-
+  <string name="placeholer_lieu_course">Lieu des courses</string>
+  <string name="placeholder_liste_course">Entrez la liste des courses</string>
+  
 </resources>

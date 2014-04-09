@@ -20,6 +20,7 @@ import android.text.format.Time;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by Mohamed on 02/04/14.
@@ -44,13 +45,13 @@ public class AddCourseActivity extends Activity {
         final int day = getIntent().getIntExtra("day", 0);
         final int month = getIntent().getIntExtra("month", 0);
         final int year = getIntent().getIntExtra("year", 0);
-
-        Button submit = (Button)findViewById(R.id.submit_course);
-
+        
         intent.putExtra("day", day);
         intent.putExtra("month", month);
         intent.putExtra("year", year);
-
+        
+        //--- clic sur le bouton d'ajout d'une liste de courses ---
+        Button submit = (Button)findViewById(R.id.submit_course); 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,17 +66,28 @@ public class AddCourseActivity extends Activity {
                 intent.putExtra("description", contenu.getText().toString());
                 
                 insertElement(year, month, day,
-                        titre.getText().toString(), contenu.getText().toString(),
-                        lieu.getText().toString(), Event.COLOR_GREEN);
+                        	  titre.getText().toString(), contenu.getText().toString(),
+                        	  lieu.getText().toString(), Event.COLOR_GREEN);
                 
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 
                 startActivityForResult(intent, PlanningFragment.REQ_COURSE);
+                Toast.makeText(getApplicationContext(), "Une liste de courses vient d'être ajoutée", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
+        
+        //--- clic sur le bouton annuler ---
+        Button btn_cancel = (Button)findViewById(R.id.cancel_course);
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
 
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+        	
+        });
     }
 
     /**
