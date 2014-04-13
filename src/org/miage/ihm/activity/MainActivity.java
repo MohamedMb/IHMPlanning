@@ -6,6 +6,7 @@ import org.miage.ihm.R;
 import org.miage.ihm.fragments.CoursesFragment;
 import org.miage.ihm.fragments.HomeFragment;
 import org.miage.ihm.fragments.MenuFragment;
+import org.miage.ihm.fragments.OptionFragment;
 import org.miage.ihm.fragments.PlanningFragment;
 import org.miage.ihm.fragments.RdvFragment;
 import org.miage.ihm.navdrawer.adapter.NavDrawerListAdapter;
@@ -70,7 +71,7 @@ public class MainActivity extends Activity {
 		// Pages
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
 
-		//navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
+		navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1)));
 		
 
 		// Recycle the typed array
@@ -182,6 +183,10 @@ public class MainActivity extends Activity {
 		case 4:
             fragment = new MenuFragment();
             drawable = R.drawable.ic_menu;
+            break;
+		case 5:
+            fragment = new OptionFragment();
+            drawable = R.drawable.ic_option;
             break;
 		default:
 			break;
